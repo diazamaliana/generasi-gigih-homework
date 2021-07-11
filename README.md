@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Homework Task
+### `Section 3`
+- [x] Initialize an empty React App (from CRA)
+- [x] Install Axios on that React App
+- [x] Set up Spotify API (client ID)
+- [x] Push the code to github. Repo name : `generasi-gigih-homework`. Add release and tag format.
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
