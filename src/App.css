@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.song-wrapper {
+	display: inline-block;
+	margin: auto 20px ;
+	padding: 20px;
+	border: 1px solid #666;
+	text-align: center;
+}
+
+
