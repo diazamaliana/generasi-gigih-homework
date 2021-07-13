@@ -1,10 +1,12 @@
+
+
 const Playlist = ({ data }) => {
     const { name, album, artists, external_urls} = data;
     const artistTxt = artists.map((artist, idx) => {
         const isLast = idx === artists.length - 1;
         const txt = isLast ? artist.name : artist.name + ",";
         return (
-            <a href="${external_urls.spotify}">{txt}</a>
+            <a href={artist.external_urls.spotify} key={idx}>{txt}</a>
         );
     });
     return (
@@ -25,8 +27,11 @@ const Playlist = ({ data }) => {
                     <h2>
                         <a href={external_urls.spotify}>{name}</a>
                     </h2>
+                    <h3>
+                        <a>{artistTxt}</a>
+                    </h3>
                     <h4>
-                        <a href={external_urls.spotify}>{album.name}</a>
+                        <a href={album.external_urls.spotify}>{album.name}</a>
                     </h4>
                 </div>
 
