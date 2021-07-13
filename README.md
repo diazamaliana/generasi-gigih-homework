@@ -8,7 +8,7 @@
 ### `Module 2- Section 1`
 - [ ] Create a page in React which contains the following data. The layout will be similar to the previous exercise without the form part only.
 - [ ] Create all of them in `App.js` in one component
-- [ ] Download the data [here](https://gist.githubusercontent.com/aryapradipta9/0b8d0a1a113e3594d34c68c72ec32daf/raw/cb5d20b494bd2cb259d31596b9e8eea02e0f6d1e/single-sample.js)
+- [ ] Download the data [here](https://gist.githubusercontent.com/aryapradipta9/0b8d0a1a113e3594d34c68c72ec32daf/raw/cb5d20b494bd2cb259d31596b9e8eea02e0f6d1e/single-sample.js) and put that in your react
 
 ## Getting Started with Create React App
 
