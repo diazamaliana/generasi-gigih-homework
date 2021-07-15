@@ -1,0 +1,29 @@
+.cover img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.desc{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-align: left;
+}
+
+.desc h2{
+    color: #0B0C10;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all ease-in 100ms;
+    margin:5px 0;
+}
+
+.desc a{
+    color: #93918F;
+    text-decoration: none;
+    font-size:18px;
+}
+
+.desc a:hover{
+    cursor: pointer;
+    color: #F3CE7D;
+}
