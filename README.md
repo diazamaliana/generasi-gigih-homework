@@ -10,6 +10,9 @@
 - [x] Create all of them in `App.js` in one component
 - [x] Download the data [here](https://gist.githubusercontent.com/aryapradipta9/0b8d0a1a113e3594d34c68c72ec32daf/raw/cb5d20b494bd2cb259d31596b9e8eea02e0f6d1e/single-sample.js) and put that in your react
 
+### `Module 2 - Section 2`
+- [ ] From previous homework, convert the track elements (which contains song title, image, album, etc) into components Move it outside main component. 
+
 
 ## Getting Started with Create React App
 
