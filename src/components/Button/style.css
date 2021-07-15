@@ -1,0 +1,43 @@
+:root{
+    --primary: #F3CE7D;
+    --white: #F8F8F8;
+    --black: #0B0C10;
+}
+
+.btn {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn--primary--solid {
+    background-color: var(--primary);
+    color: var(--black);
+    border: none;
+}
+
+.btn--primary--outline {
+    background-color:transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn--large {
+    padding:15px 30px;
+    font-size: 20px;
+}
+
+.btn--medium {
+    padding:10px 20px;
+    font-size: 18px;
+}
+
+.btn--small{
+    padding:10px 10px;
+    font-size: 16px;
+}
