@@ -1,5 +1,25 @@
 # Homework Task
 ## Module 1
+### [Section 1](https://github.com/diazamaliana/gfe01079-projects/tree/module-1/section-1)
+Create a page that does the following
+- [x] Have a title 
+- [x] Have a heading1 with "Create Playlist" text 
+- [x] Have a form which accepts title and deccription on the playlist 
+- [x] When the form submitted, show a popup with `alert()` with some text 
+- [x] Create a div that contains this following items on the internet :
+    * Pictures
+    * A text for Title
+    * A text for Artist
+    * A text for Albums
+    * A button that does nothing
+    * This `div` should have borders outside, margins, and padding
+
+### [Section 2](https://github.com/diazamaliana/gfe01079-projects/tree/module-1/section-2)
+- [x] Create a new directory that duplicate the previous homework
+- [x] Refactor the code to add some call to get a track info. You can get the data [here](https://gist.githubusercontent.com/aryapradipta9/e6492383477803b233916e01f36d5465/raw/66942c739d66d3774303f84071696aa865a07077/single-sample.json).
+- [x] Try to call above endpoint with a `GET` method, and `console.log()` the response
+- [x] Do alert() when there is an error
+
 ### `Section 3`
 - [x] Initialize an empty React App (from CRA)
 - [x] Install Axios on that React App
