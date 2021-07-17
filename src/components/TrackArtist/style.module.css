@@ -1,0 +1,11 @@
+.Artist a{
+    color: #93918F;
+    text-decoration: none;
+    font-size:18px;
+}
+
+.Artist a:hover{
+    cursor: pointer;
+    color: #F3CE7D;
+}
+
