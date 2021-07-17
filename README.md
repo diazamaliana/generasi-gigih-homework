@@ -1,6 +1,6 @@
-# Homework Task
+# Homework Task | [Hands On Task](https://github.com/diazamaliana/generasi-gigih-handson/)
 ## Module 1
-### [Section 1](https://github.com/diazamaliana/gfe01079-projects/tree/module-1/section-1) | [Hands On](https://github.com/diazamaliana/gfe01079-projects/tree/module-1/hands-on)
+### [Section 1](https://github.com/diazamaliana/gfe01079-projects/tree/module-1/section-1) 
 Create a page that does the following
 - [x] Have a title 
 - [x] Have a heading1 with "Create Playlist" text 
