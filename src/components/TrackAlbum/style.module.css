@@ -1,3 +1,7 @@
+.Album{
+    height: 48px;
+}
+
 .Album a{
     color: #93918F;
     text-decoration: none;
