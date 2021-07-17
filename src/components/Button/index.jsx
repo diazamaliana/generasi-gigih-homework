@@ -11,17 +11,19 @@ const SIZES = [ "btn--medium", "btn--large","btn--small"];
 const Button = ({
     children, 
     type, 
-    onClick, 
+    to, 
     buttonStyle, 
-    buttonSize
+    buttonSize,
+    ...props
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle: STYLES[0];
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize: SIZES[0];
 
     return (
         <button 
+            {...props}
             className={`btn ${checkButtonStyle} ${checkButtonSize}`} 
-            onClick={onClick} 
+            onClick={()=> window.open(to)} 
             type={type}
         >
             {children}
