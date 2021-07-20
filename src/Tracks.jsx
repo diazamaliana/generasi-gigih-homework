@@ -1,9 +1,8 @@
 //import Component
 import Button from "./components/Button";
 import Card from "./components/Card";
-import Album from "./components/TrackAlbum";
+import TrackDescription from "./components/TrackDescription";
 import Cover from "./components/TrackCover";
-import Artist from "./components/TrackArtist";
 import Title from "./components/TrackTitle";
 
 //import Data
@@ -32,8 +31,12 @@ function Tracks(){
       <Card key={id}>
         <Cover imageUrl={thumbnail.url} alt={album} />
         <Title>{title}</Title>
-        <Artist href={artist.external_urls.spotify}>{artist.name}</Artist>
-        <Album href={urlAlbum.spotify}>{album}</Album>
+        <TrackDescription 
+          albumName={album}
+          albumUrl= {urlAlbum.spotify}
+          artistUrl = {artist.external_urls.spotify}
+          artistName = {artist.name}></TrackDescription>
+
         <Button 
           type="button"
           buttonStyle="btn--primary--solid"

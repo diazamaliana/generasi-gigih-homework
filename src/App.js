@@ -6,7 +6,7 @@ function App() {
   return (
 
     <div className="App">
-      <h1  style={{ textAlign: "Center", fontFamily:"Montserrat" }}>Create Playlist</h1>
+      <h1  style={{ textAlign: "Center", fontFamily:"Montserrat", color:"#ffffff" }}>Create Playlist</h1>
       <div className="song-wrapper">
           <Tracks/>
       </div>
