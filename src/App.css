@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 60px;
 }
 
 .App-logo {
@@ -37,12 +38,12 @@
   }
 }
 
-.song-wrapper {
+/* .song-wrapper {
 	display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: left;
-}
+} */
 
 
 

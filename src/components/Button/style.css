@@ -13,7 +13,9 @@
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    /* transform: translateY(-3px); */
+    transform: scale(1.06);
+    opacity: 0.9;
 }
 
 .btn--primary--solid {

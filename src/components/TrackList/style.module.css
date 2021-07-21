@@ -1,3 +1,12 @@
+.Title{
+    color: #fdfdfd;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all ease-in 100ms;
+    margin:5px 0;
+    height: 48px;
+}
+
 .Artist{
     margin-top:-5px;
 }

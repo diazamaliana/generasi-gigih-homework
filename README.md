@@ -40,4 +40,15 @@ Create a page that does the following
 - [x] Download the data [here](https://gist.githubusercontent.com/aryapradipta9/4085f18a47101f10f685a6140385b2bf/raw/e32426bc2d954274e984b03c601f14c08eb47a0b/all-sample.js). This contains array of tracks.
 - [x] Loop the data and create track components for each track listed. 
 
+## Module 3
+### `Section 1`
+- [x] Have a link that when clicked, it redirects to Spotify Auth API. 
+- [x] Read it more [here](https://developer.spotify.com/documentation/general/guides/authorization-guide/) in the Implicit Grant Flow section
+- [x] For the scope, use playlist-modify-private
+- [x] Set up the callback URL as localhost:3000 in the Spotify Dashboard
+- [x] The callback will contains the Access Token, which you’ll need for next request. Store that in a state.
+- [x] Create a search song functionalities
+- [x] Place it above the Tracks Table
+- [x] Have a Search button, when the button is clicked, it calls Spotify [Search API](https://developer.spotify.com/documentation/web-api/reference/#category-search). Later on, show the results on the Tracks Table.
+
 
