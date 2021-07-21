@@ -1,0 +1,14 @@
+.SearchBar form {
+    display: flex;
+  }
+
+.input {
+    color: white;
+    padding: 1em;
+    margin-right: 0.5em;
+    min-width: 300px;
+    border: none;
+    background-color:#4d4d4d;
+    outline: none;
+}
+  
