@@ -1,7 +1,6 @@
 //import Component
 import Button from "../Button";
 import Card from "../Card";
-//import TrackDescription from "./TrackDescription";
 import Cover from "../TrackCover";
 import Style from './style.module.css';
 
@@ -26,8 +25,8 @@ import Style from './style.module.css';
   //     return { id, title, artist, album, thumbnail, urlAlbum, urlTrack };
   // };
 
-  const TrackList = ({data})=>{
-    const {id, name, artists, album, external_urls} = data;
+  const TrackList = ({data, isSelected, handleSelect})=>{
+    const {id, name, artists, album} = data;
 
     const artistName = artists.map((artist, idx) => {
       const isLast = idx === artists.length - 1;
@@ -49,9 +48,12 @@ import Style from './style.module.css';
 
         <Button 
           type="button"
-          buttonStyle="btn--primary--solid"
-          buttonSize="btn--medium" 
-          onClick={()=> window.open(external_urls.spotify)}>Select</Button>
+          buttonStyle={isSelected ? "btn--primary--outline" : "btn--primary--solid"}
+          buttonSize="btn--small" 
+          onClick={()=> handleSelect(data.uri)}>
+            {isSelected ? "Selected" : "Select"}
+        </Button>
+
       </Card>
     );
 };

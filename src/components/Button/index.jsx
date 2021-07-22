@@ -10,8 +10,7 @@ const SIZES = [ "btn--medium", "btn--large","btn--small"];
 
 const Button = ({
     children, 
-    type, 
-    //to, 
+    type,  
     buttonStyle, 
     buttonSize,
     ...props
@@ -23,8 +22,6 @@ const Button = ({
         <button 
             {...props}
             className={`btn ${checkButtonStyle} ${checkButtonSize}`} 
-            // onClick={()=> window.open(to)} 
-            // type={type}
         >
             {children}
         </button>

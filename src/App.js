@@ -1,20 +1,20 @@
 import './App.css';
 import { useEffect, useState } from "react";
-import { callback } from "./config/Login";
+import { callback } from "./config/loginAuth";
 import TrackWrapper from "./components/TrackWrapper";
 import Heading from "./components/Heading";
 import Navbar from "./components/Navbar";
 import data from "./data/Track";
-import { getProfile, getSearchTrack } from "./config/Spotify";
+import { getProfile, getSearchTrack } from "./config/spotify";
 
 function App() {
   const [trackList, setTrackList] = useState(data);
-  const [login, setAuth] = useState(false);
+  const [loginAuth, setLoginAuth] = useState(false);
   const [userData, setUserData] = useState({});
   useEffect(() => {
     const payload = callback();
     if (payload) {
-      setAuth(payload);
+      setLoginAuth(payload);
       getProfile(payload.access_token).then((res) => {
         setUserData(res);
       });
@@ -26,7 +26,7 @@ function App() {
        type: "track",
        limit: 20,
      };
-    getSearchTrack(login.access_token, options).then((res) => {
+    getSearchTrack(loginAuth.access_token, options).then((res) => {
        setTrackList(res.tracks.items);
      });
    };
@@ -34,8 +34,8 @@ function App() {
   return (
 
     <div className="App">
-      <Navbar  userData={{ ...userData, ...login }}  handleSearch={handleSearch} />
-        <Heading>Playlist</Heading>
+      <Navbar  userData={{ ...userData, ...loginAuth }}  handleSearch={handleSearch} />
+        <Heading>Create Playlist</Heading>
       <TrackWrapper data={trackList}/>
     </div>
   );

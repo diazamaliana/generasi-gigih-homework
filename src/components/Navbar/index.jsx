@@ -1,7 +1,7 @@
 import Button from "../Button";
 import SearchBar from "../SearchBar";
 import Profile from "../Profile";
-import { redirect } from "../../config/Login";
+import { redirect } from "../../config/loginAuth";
 import Style from "./style.module.css";
 
 

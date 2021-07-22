@@ -1,3 +1,4 @@
+//The ID provided to the application at the time of registration of the app
 const REACT_APP_CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const REACT_APP_REDIRECT_URL = process.env.REACT_APP_BASE_URL;
 const generateRandomString = (length) => {
@@ -11,6 +12,7 @@ const generateRandomString = (length) => {
 };
 
 const redirect = () => {
+
   const scope = "user-read-private playlist-modify-private user-read-email";
   const state = generateRandomString(16);
   let url = "https://accounts.spotify.com/authorize";
