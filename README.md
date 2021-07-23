@@ -51,4 +51,9 @@ Create a page that does the following
 - [x] Place it above the Tracks Table
 - [x] Have a Search button, when the button is clicked, it calls Spotify [Search API](https://developer.spotify.com/documentation/web-api/reference/#category-search). Later on, show the results on the Tracks Table.
 
+### `Section 2`
+- [x] Use the uri as the identifier
+- [x] build the component using hooks
+- [x] add features select and deselect songs
+
 
