@@ -1,29 +1,9 @@
 //import Component
 import Button from "../Button";
+import Link from "../Link";
 import Card from "../Card";
 import Cover from "../TrackCover";
 import Style from './style.module.css';
-
-
-//import Data
-//import data from "../data/Track";
-
-//function Tracks(){
-  //   const track = (data) => {
-  //     const {
-  //       album: {
-  //         images: [thumbnail],
-  //         artists: [artist],
-  //         external_urls: urlAlbum,
-  //         name: album,
-  //       },
-  //       external_urls: urlTrack,
-  //       name: title,
-  //       id,
-  //     } = data;
-    
-  //     return { id, title, artist, album, thumbnail, urlAlbum, urlTrack };
-  // };
 
   const TrackList = ({data, isSelected, handleSelect})=>{
     const {id, name, artists, album} = data;
@@ -32,19 +12,21 @@ import Style from './style.module.css';
       const isLast = idx === artists.length - 1;
       const txt = isLast ? artist.name : artist.name + ",";
       return (
-          <a href={artist.external_urls.spotify} key={idx}> {txt}</a>
+          <Link href={artist.external_urls.spotify} key={idx}> {txt}</Link>
       );
   }); 
-    // const { id, title, artist, album, thumbnail, urlAlbum, urlTrack  } = track(trackContent);
     return (
       <Card key={id}>
         <Cover imageUrl={album.images[0].url} alt={album} />
         <h2 className={Style.Title}>{name}</h2>
 
-        <div className={Style.Desc}>
-            <p className={Style.Artist} ><a href={artists.external_urls}>{artistName} </a></p>  
-            <p className={Style.Album}><a href={album.external_urls.spotify}>{album.name}</a></p>
-        </div>
+        <p className={Style.Artist}>
+            <Link href={artists.external_urls}> {artistName} </Link>  
+        </p>
+
+        <p className={Style.Album}>
+          <Link href={album.external_urls.spotify}>{album.name}</Link>
+        </p>
 
         <Button 
           type="button"

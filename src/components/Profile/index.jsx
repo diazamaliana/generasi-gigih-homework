@@ -1,4 +1,5 @@
 import Style from "./style.module.css";
+import Link from "../Link";
 
 const Profile = ({ userData }) => {
     const isLoading = userData.display_name === undefined;
@@ -8,7 +9,7 @@ const Profile = ({ userData }) => {
     ) : (
       <div className={Style.container}>
         <img className={Style.image} src={images[0]?.url} alt={display_name} />
-        <a href={external_urls.spotify} className={Style.name}>{id}</a>
+        <Link href={external_urls.spotify} className={Style.name}>{id}</Link>
       </div>
     );
   };

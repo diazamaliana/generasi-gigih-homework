@@ -1,40 +1,27 @@
+
+
 .Title{
     color: #fdfdfd;
     font-size: 18px;
     font-weight: bold;
     transition: all ease-in 100ms;
     margin:5px 0;
-    height: 48px;
+    padding: 10px 0;
+    max-height: 48px;
 }
 
 .Artist{
     margin-top:-5px;
-}
-.Artist a{
-    color: #93918F;
-    text-decoration: none;
+    padding: 10px 0;
     font-size:16px;
     font-style:italic;
 }
 
-.Artist a:hover{
-    cursor: pointer;
-    color: #1ed760;
-}
 
-.Album{
+.Album {
     height: 48px;
-}
-
-.Album a{
-    color: #93918F;
-    text-decoration: none;
     font-size:18px;
 }
 
-.Album a:hover{
-    cursor: pointer;
-    color: #1ed760;
-}
 
 

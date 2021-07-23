@@ -1,11 +1,11 @@
 .Navbar {
     display: flex;
     padding: 0.5em;
-    width: 98%;
+    width: 100%;
     position: fixed;
     top: 0px;
-    background-color: #121212;
-    border-bottom: 1px solid rgb(54, 54, 54);
+    background-color: var(--primary-black);
+    border-bottom: 1px solid var(--primary-grey);
     z-index: 1500;
     justify-content: space-between;
 }

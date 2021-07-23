@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from './style.module.css';
 import TrackList from '../TrackList';
-import { useTrack } from '../../config/selectTrack';
+import { useTrack } from '../../config/getSelectedTrack';
 
 
 const TrackWrapper = ({ data }) => {

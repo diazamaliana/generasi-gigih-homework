@@ -1,0 +1,9 @@
+.Link {
+    color: var(--secondary-grey);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Link:hover {
+    color: var(--primary-green);
+}
