@@ -1,7 +1,4 @@
 .TrackWrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: left;
+  padding: .75rem;
 }
 

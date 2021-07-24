@@ -1,20 +1,21 @@
 import React from 'react';
 import Style from './style.module.css';
 import TrackList from '../TrackList';
-import { useTrack } from '../../config/getSelectedTrack';
+//import { useTrack } from '../../config/getSelectedTrack';
 
 
-const TrackWrapper = ({ data }) => {
-    const {checkSelected, handleSelect} = useTrack();
+const TrackWrapper = ({ tracks, handleSelect, selectedTracks }) => {
+  
     return(
         <div>
           <div className={Style.TrackWrapper}>
-          {data.map((track) => (
+          {tracks && tracks.map((track) => (
               <TrackList
                 key={track.id}
-                data={track}
+                track={track}
                 handleSelect={handleSelect}
-                isSelected={checkSelected(track.uri)}
+                selectedTracks={selectedTracks}
+                isSelected={selectedTracks.includes(track.uri)}
             />
           ))}
           </div>

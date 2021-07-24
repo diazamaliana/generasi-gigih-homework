@@ -1,3 +1,8 @@
+/**
+  * Obtains parameters from the hash of the URL
+  * @return Object
+*/
+
 const callback = () => {
   const getHashParams = {};
     const r = /([^&;=]+)=?([^&;]*)/g;

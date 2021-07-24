@@ -1,8 +1,15 @@
-.SearchBar form {
-    display: flex;
-  }
+.SearchBar {
+  text-align: left;
+  padding: 0.75rem;
+}
 
-.input {
+.SearchBar p{
+  padding-bottom: 10px;
+  color: whitesmoke;
+  text-align: left;
+  font-weight: bold;
+}
+.SearchBar input {
     color: white;
     padding: 1em;
     margin-right: 0.5em;

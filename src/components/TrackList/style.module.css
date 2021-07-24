@@ -1,27 +1,40 @@
-
-
-.Title{
-    color: #fdfdfd;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all ease-in 100ms;
-    margin:5px 0;
-    padding: 10px 0;
-    max-height: 48px;
+.trackList {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.Artist{
-    margin-top:-5px;
-    padding: 10px 0;
-    font-size:16px;
-    font-style:italic;
+.trackList td {
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid var(--primary-grey);
 }
 
-
-.Album {
-    height: 48px;
-    font-size:18px;
+.trackList tr:hover {
+    background-color: var(--primary-grey);
 }
 
+.trackList td:nth-child(1) {
+    width: 10%;
+}
+.trackList td:nth-child(2) {
+    width: 50%;
+}
+.trackList th:nth-child(3) {
+    width: 30%;
+}
+.trackList th:nth-child(4) {
+    width: 10%;
+}
 
+.title {
+    font-weight: 600;
+    margin: 5px 0px;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: left;
+}
 
+.artist, .album {
+    text-align: left;
+    color: whitesmoke;
+}

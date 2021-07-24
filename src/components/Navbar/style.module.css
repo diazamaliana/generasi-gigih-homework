@@ -4,7 +4,7 @@
     width: 100%;
     position: fixed;
     top: 0px;
-    background-color: var(--primary-black);
+    background-color: var(--primary-dark);
     border-bottom: 1px solid var(--primary-grey);
     z-index: 1500;
     justify-content: space-between;

@@ -10,6 +10,7 @@ const SearchBar = ({ handleSearch }) => {
   return (
     <div>
       <div className={Style.SearchBar}>
+      <p>Let's find something for your playlist</p>
         <form onSubmit={onSubmit}>
           <input
             name="track"

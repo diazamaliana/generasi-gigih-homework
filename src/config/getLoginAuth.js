@@ -23,5 +23,6 @@
 
 export { redirect };
 
+//source : https://github.com/spotify/web-api-auth-examples/blob/master/implicit_grant/public/index.html
 
   
