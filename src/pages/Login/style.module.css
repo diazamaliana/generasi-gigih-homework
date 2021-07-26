@@ -1,0 +1,16 @@
+
+.login {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+  }
+
+  .login > button {
+    font-family: 'Monsteratt', sans-serif;
+    border-radius: 50px;
+    padding:10px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--primary-green);
+    cursor: pointer;
+  }

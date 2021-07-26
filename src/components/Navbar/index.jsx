@@ -1,33 +1,17 @@
-import Button from "../Button";
-//import SearchBar from "../SearchBar";
-import Profile from "../Profile";
-import { redirect } from "../../config/getLoginAuth";
-import Style from "./style.module.css";
+import style from "./style.module.css";
 
 
 
 
-const Navbar = ({ userData }) => {
-    const isLogin = userData?.access_token !== undefined;
+const Navbar = () => {
+    
     return (
-      <div className={Style.Navbar}>
-        {isLogin ?
-          (
-            <>            
-              
-              <Profile userData={userData} />
-            </>
-          ) : (
-           <>
+      <div className={style.Navbar}>
+                   
+        <div >
+          <p>Jane Doe</p>       
+        </div>
             
-            <Button 
-              type="button"
-              buttonStyle="btn--primary--solid"
-              buttonSize="btn--medium" 
-              onClick={() => redirect()}
-              >Login</Button> 
-          </>)
-        }        
       </div>
     );
   };
