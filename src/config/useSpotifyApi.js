@@ -16,7 +16,7 @@ export const useSpotifyAuth =  () => {
       return loginAuth
   }
 
-  const getReturnedParams = (hash) => {
+const getReturnedParams = (hash) => {
       const stringAfterHashtag = hash.substring(1);
       const paramsInUrl = stringAfterHashtag.split("&");
       const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
@@ -28,4 +28,5 @@ export const useSpotifyAuth =  () => {
     
       return paramsSplitUp;
   }
+
 
