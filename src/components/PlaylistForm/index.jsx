@@ -1,7 +1,43 @@
 import style from "./style.module.css"
 import Button from "../Button";
+import { useDispatch, useSelector } from 'react-redux'
+import { clearSelectedTracks, setForm } from "../../redux/store/playlist";
+import { createPlaylist, addTrackToPlaylist } from "../../libraries/apiSpotify";
 
-const PlaylistForm = ({ form, handleSubmit, handleFormChanges }) => {
+const PlaylistForm = () => {
+  const { accessToken, user } = useSelector(state => state.userAuth)
+  const { selectedTracks, form } = useSelector(state => state.playlist)
+  const dispatch = useDispatch()
+
+  const clearSelection = () => dispatch(clearSelectedTracks())
+
+  const handleFormChanges = e => {
+         dispatch(setForm({[e.target.name]: e.target.value}))
+  }
+
+  const handleSubmit = e => {
+       e.preventDefault()
+       if (selectedTracks.length > 0){
+           createPlaylist(accessToken, user.id, {
+           name: form.title,
+           description: form.description,
+           public: false,
+         }).then(playlist => {
+           return addTrackToPlaylist(accessToken, playlist.id, {
+             uris: selectedTracks
+           })
+         }).then(() => {
+           clearSelection()
+           alert('Playlist created')
+         })
+       } else {
+         alert ('Please selected some track to make a playlist!')
+       }
+     
+   }
+
+  
+
   return (
     <div className={style.wrapper}>
       <h1>Create Playlist</h1>

@@ -1,24 +1,23 @@
 import React from 'react';
 import style from "./style.module.css";
-import getLoginAuth from '../../config/getLoginAuth';
-//import getReturnedParams from '../../config/getReturnedParams';
+import { useSpotifyAuth } from '../../libraries/useSpotifyAuth';
+import { authorize } from '../../libraries/apiSpotify';
 
-/* 
-http://localhost:3000/dashboard#access_token=ABCqxL4Y&token_type=Bearer&expires_in=3600
-*/
+
 
 const Login = () => {
-    const spotifyAuthUrl = getLoginAuth();
-
-      const handleLoginButton = () => {
-        window.location = `${spotifyAuthUrl}`;
-      };
+  const { isAuthenticated } = useSpotifyAuth()
     
-    return(
+  return isAuthenticated ? (
+   
+      <div style={{ textAlign: "center" }}>
+          <p> Welcome to GG Music Player </p>
+      </div>
+    ) : (
         <div className={style.login} >
-            <button onClick={handleLoginButton} > Login with Spotify </button>
+            <button onClick={authorize} > Login with Spotify </button>
         </div>    
-    )
+  )
 }
 
 export default Login;

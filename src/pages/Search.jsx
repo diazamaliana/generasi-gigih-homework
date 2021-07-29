@@ -2,49 +2,38 @@ import { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import PlaylistForm from "../components/PlaylistForm";
 import Navbar from "../components/Navbar";
-import { useSpotifyAuth } from "../config/useSpotifyApi";
-import Login from "./Login";
-import TrackWrapper from "../components/TrackWrapper";
+import { useSpotifyAuth } from "../libraries/useSpotifyAuth";
+import TrackList from "../components/TrackList";
 import data from "../data/Track";
-import { getProfile, getSearchTrack, createPlaylist, addTrackToPlaylist } from "../config/spotifyEndpoint";
+import { getProfile, getSearchTrack, createPlaylist, addTrackToPlaylist } from "../libraries/apiSpotify";
 import { useSelector, useDispatch } from 'react-redux';
 import { storeUser } from "../redux/store/userAuth";
 
 
 const Search = () => {
-    const loginAuth = useSpotifyAuth();
+  const user = useSelector(state => state.userAuth.user)
+  const dispatch = useDispatch()
 
-    return loginAuth.isAuth ? (
-      <AuthUser accessToken={loginAuth.access_token} />
-    ) : (
-      <div style={{ textAlign: "center" }}>
-          <p>Welcome to GG Music Player</p>
-          <Login /> 
-      </div>
-    )
-}
+  const { isAuthenticated, accessToken } = useSpotifyAuth()
 
-
-const AuthUser = props => {
-    const user = useSelector(state => state.userAuth.user);
-    const dispatch = useDispatch();
-    const [isLoading, setIsLoading] = useState(false);
-    const [trackList, setTrackList] = useState(data);
-    const [selectedTracks, setSelectedTracks] = useState([]);
-    //const [userId, setUserId] = useState('')
-    const [form, setForm] = useState({
+  const [trackList, setTrackList] = useState(data)
+  const [selectedTracks, setSelectedTracks] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [form, setForm] = useState({
     title: '',
     description: '',
-  });
+  })
 
   useEffect(() => {
-    getProfile(props.accessToken).then(user => dispatch(storeUser(user)))
-  }, [])
+    if (isAuthenticated) {
+      getProfile(accessToken).then(user => dispatch(storeUser(user)))
+    }
+  }, [isAuthenticated, accessToken])
   
-    const handleSearch = query => {
+    const handleSearch = (query) => {
       setIsLoading(true)
-      getSearchTrack(props.accessToken, {
-        query,
+      getSearchTrack(accessToken, {
+        q : query,
         type: 'track',
         limit: 12,
       }).then(res => {
@@ -57,12 +46,12 @@ const AuthUser = props => {
   const handleSubmit = e => {
       e.preventDefault()
       if (selectedTracks.length > 0){
-          createPlaylist(props.accessToken, user.id, {
+          createPlaylist(accessToken, user.id, {
           name: form.title,
           description: form.description,
           public: false,
         }).then(playlist => {
-          return addTrackToPlaylist(props.accessToken, playlist.id, {
+          return addTrackToPlaylist(accessToken, playlist.id, {
             uris: selectedTracks
           })
         }).then(() => {
@@ -102,7 +91,7 @@ const AuthUser = props => {
         {isLoading ? (
             <p>Loading...</p>
         ) : (
-        <TrackWrapper
+        <TrackList
             handleSelect={handleSelect}
             selectedTracks={selectedTracks} 
             tracks={trackList}/>
@@ -110,4 +99,5 @@ const AuthUser = props => {
     </div>
     ) 
 }
+
 export default Search;

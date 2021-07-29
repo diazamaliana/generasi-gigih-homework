@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from "../Button";
 import Link from "../Link";
 import Cover from "../TrackCover";
 import style from './style.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { addSelectedTracks, removeSelectedTracks } from "../../redux/store/playlist";
 
-  const TrackList = props =>{
-    const {track, handleSelect} = props;
-    const [isSelected, setIsSelected] = useState(false);
+const TrackList = ({ track }) =>{
+    const dispatch = useDispatch();
+    const selectedTracks = useSelector(state => state.playlist.selectedTracks)
+    const isSelected = selectedTracks.includes(track.uri);
 
     const handleClick = () => {
-      handleSelect(track.uri)
-      setIsSelected(!isSelected)
+      if (isSelected) {
+        dispatch(removeSelectedTracks(track.uri))
+      } else {
+        dispatch(addSelectedTracks(track.uri))
+      }
     }
-
-    useEffect(() => props.isSelected && setIsSelected(true), [])
 
 
     const artistName = track.artists.map((artist, idx) => {
@@ -22,11 +26,11 @@ import style from './style.module.css';
       return (
           <Link href={artist.external_urls.spotify} key={idx}> {txt}</Link>
       );
+  });
 
-
-  }); 
     return (
-      <table className={style.trackList} >
+      <div className={style.wrapper}>
+        <table className={style.trackList} >
           <tbody>
               <tr>
                 <td ><Cover imageUrl={track.album.images[0].url} alt={track.album} /></td>
@@ -49,6 +53,8 @@ import style from './style.module.css';
             </tr>
           </tbody>
       </table>
+      </div>
+      
 
     );
 };
