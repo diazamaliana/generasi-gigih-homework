@@ -7,9 +7,7 @@ import { login, storeUser } from "../redux/store/userAuth";
 export const useSpotifyAuth =  () => {
   const { isAuthenticated, accessToken, user } = useSelector(state => state.userAuth)
   const dispatch = useDispatch();
-  //const history = useHistory();
-
-  // const [loginAuth, setLoginAuth] = useState([{ isAuth: false },
+  const history = useHistory();
   
     useEffect(() => {
       if (!isAuthenticated && window.location.hash) {
@@ -22,10 +20,10 @@ export const useSpotifyAuth =  () => {
       if (isAuthenticated && Object.keys(user).length === 0) {
         getProfile(accessToken).then(user => {
           dispatch(storeUser(user))
-          //history.push('/create-playlist')
+          history.push('/create-playlist')
         })
       }
-    }, [isAuthenticated, accessToken, user, dispatch])
+    }, [isAuthenticated, accessToken, user, history, dispatch])
   
     return useSelector(state => state.userAuth)
 }
