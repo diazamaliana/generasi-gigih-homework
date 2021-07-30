@@ -61,6 +61,7 @@ Create a “create playlist” form with the following fields
 - [x] Title, minimum 10 characters
 - [x] Description, minimum 20 characters
 - [x] A button to submit
+
 When the button is clicked, create a new playlist with those title and description, with songs that were selected previously
 - [x] Use Get Current User's Profile, Create a Playlist, and Add Items to a Playlist API to achieve this. Read more in the API Docs
 - [x] Playlist should be private and collaborative should be false
