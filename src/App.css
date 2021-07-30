@@ -1,18 +1,26 @@
 .App {
+  display: grid;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr 30px;
+  grid-template-columns: 1fr 4fr;
+  overflow: hidden;
 }
 
-
-
-.body {
-  padding-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+.welcome{
   overflow: hidden;
+  grid-template-columns: 1fr 1fr;
 }
 
 .content {

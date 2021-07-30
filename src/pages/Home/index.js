@@ -1,17 +1,9 @@
-import { useSpotifyAuth } from "../../libraries/useSpotifyAuth"
-
-const Homepage = () => {
-  const { isAuthenticated } = useSpotifyAuth()
-
-  return isAuthenticated ? (
+const Home = () => {
+  return (
       <div style={{ textAlign: "center" }}>
-          <p> Welcome to GG Music Player </p>
+          <h1> Welcome to Spotigi </h1>
       </div>
-    ) : (
-      <div >
-        <p> Please Login to Spotify First </p>
-      </div> 
   )
 }
 
-export default Homepage
+export default Home

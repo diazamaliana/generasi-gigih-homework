@@ -1,0 +1,57 @@
+  .wrapper {
+    /* position: absolute; */
+    margin: auto;
+    height: 92vh;
+    width: 100vw;
+    text-align: center;
+    background: url(https://images.unsplash.com/photo-1420161900862-9a86fa1f5c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) no-repeat center center fixed;    
+    background-size: cover;
+  }
+
+  .content {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+  }
+  
+  .content > h1 {
+    top: 0;
+    bottom: 0;
+    line-height: 1.3;
+    color: var(--primary-green);
+    font-weight: 900;
+    font-size: 100px;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  .btn {
+    margin: 1.3em auto;
+    width: 170px;
+    height: 60px;
+    display: block;
+    border: 2px solid var(--primary-green);
+    border-radius: 2px;
+    background: none;
+    font-size: 16px;
+    line-height: 54px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background .4s, color .4s;
+    transition: background .4s, color .4s;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--primary-green);
+  }

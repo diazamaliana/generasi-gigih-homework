@@ -1,34 +1,48 @@
 import './App.css';
 import Home from './pages/Home';
 import CreatePlaylist from './pages/CreatePlaylist';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import Navbar from './components/Layout/Navbar';
+import Sidebar from './components/Layout/Sidebar';
+import WelcomePage from './pages/Welcome';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import PrivateRoute from './components/PrivateRoute';
+import { useSelector } from 'react-redux'
+
+
 
 function App() {
-  
+  const { isAuthenticated } = useSelector(state => state.userAuth)
+
   return (
     <div className="App">
       <BrowserRouter>
           <div className="header">
             <Navbar />
           </div>
-          <div className="body">
-            <div className="sidebar">
-              <Sidebar />
+          { isAuthenticated ?      
+            <div className="body">
+                <div className="sidebar">
+                  <Sidebar />
+                </div>
+                <div className="content">
+                  <Switch>
+                    <Route path="/create-playlist">
+                        <CreatePlaylist />
+                    </Route>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+                  </Switch>
+                </div>
             </div>
-            <div className="content">
-            <Switch>
-              <PrivateRoute exact path="/create-playlist">
-                <CreatePlaylist />
-              </PrivateRoute>
-              <Route path='/' >
-                <Home />
-              </Route>
-            </Switch>
+            :
+            <div className="welcome">
+                <Switch>
+                    <Route path="/">
+                        <WelcomePage />
+                    </Route>
+                </Switch>
             </div>
-          </div>
+            }              
       </BrowserRouter>
   </div>
   );

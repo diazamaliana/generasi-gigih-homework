@@ -54,8 +54,6 @@ const TrackList = ({ track }) =>{
           </tbody>
       </table>
       </div>
-      
-
     );
 };
 
