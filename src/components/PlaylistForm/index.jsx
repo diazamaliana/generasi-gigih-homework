@@ -20,6 +20,7 @@ const PlaylistForm = () => {
            name: form.title,
            description: form.description,
            public: false,
+           collaborative: false
          }).then(playlist => {
            return addTrackToPlaylist(accessToken, playlist.id, {
              uris: selectedTracks
