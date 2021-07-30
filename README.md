@@ -56,7 +56,29 @@ Create a page that does the following
 - [x] build the component using hooks
 - [x] add features select and deselect songs
 
+### `Section 3`
+Create a “create playlist” form with the following fields
+- [x] Title, minimum 10 characters
+- [x] Description, minimum 20 characters
+- [x] A button to submit
+When the button is clicked, create a new playlist with those title and description, with songs that were selected previously
+- [x] Use Get Current User's Profile, Create a Playlist, and Add Items to a Playlist API to achieve this. Read more in the API Docs
+- [x] Playlist should be private and collaborative should be false
+
 ## Module 4
+### `Section 1`
+- [x] Move the access token state to redux store. The app should still behaves like it is before.
+
+### `Section 2`
+- [x] Move the create playlist page URL to /create-playlist
+- [x] The Create Playlist page only accessible when user already login. If user haven’t logged in, redirect to root URL (/)
+- [x] For the root URL (/)
+- [x] If user haven’t logged in, show the Login link
+- [x] If user already logged in, redirect to Create Playlist page
+
+### `Section 3`
+- [ ] Fix any impure functions / mutable codes, and also fix the eslint problems (if any)
+
 
 
 
