@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PlaylistForm from "../components/PlaylistForm";
-//import Navbar from "../components/Navbar";
 import TrackList from "../components/TrackList";
 import SearchBar from "../components/SearchBar";
 import { getSearchTrack,  } from "../libraries/apiSpotify";
@@ -29,9 +28,7 @@ const CreatePlaylist= () => {
     
     return (
     <div>
-        <>
-          <PlaylistForm />
-        </>
+        <><PlaylistForm /></>
         <SearchBar handleSearch = {handleSearch} />
         {isLoading ? (
             <p>Loading...</p>

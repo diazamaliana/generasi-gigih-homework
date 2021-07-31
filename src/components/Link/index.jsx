@@ -1,17 +1,8 @@
 import Style from './style.module.css'
 
-const Link = ({ isExternal = true, children, ...props }) => {
+const Link = ({ children, ...props }) => {
   return (
-    <>
-      <a
-      {...props}
-        className={Style.Link}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noreferrer" : undefined}
-      >
-        {children}
-      </a>
-    </>
+      <a {...props} className={Style.Link}>{children} </a>
   ); 
 }
 
