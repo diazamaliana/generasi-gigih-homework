@@ -78,7 +78,7 @@ When the button is clicked, create a new playlist with those title and descripti
 - [x] If user already logged in, redirect to Create Playlist page
 
 ### `Section 3`
-- [ ] Fix any impure functions / mutable codes, and also fix the eslint problems (if any)
+- [x] Fix any impure functions / mutable codes, and also fix the eslint problems (if any)
 
 
 
