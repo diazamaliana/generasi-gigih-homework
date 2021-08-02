@@ -2,43 +2,42 @@
     padding: .1rem .75rem;
 }
 
-.trackList {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.trackList td {
-    padding: 10px;
-    text-align: right;
+.container {
+    align-items: flex-start;
+    display: flex;
     border-bottom: 1px solid var(--primary-grey);
+    /* Spacing */
+    margin: 0px;
+    padding: 8px ;
 }
 
-.trackList tr:hover {
+.container:hover{
     background-color: var(--primary-grey);
 }
 
-.trackList td:nth-child(1) {
-    width: 10%;
+.cover {
+    width: 128px;
+    height: 128px;
 }
-.trackList td:nth-child(2) {
-    width: 50%;
+
+.trackTitle, .trackAlbum{
+  flex: 1;
+  padding-left: 0.8em;
 }
-.trackList th:nth-child(3) {
-    width: 30%;
-}
-.trackList th:nth-child(4) {
-    width: 10%;
-}
+
 
 .title {
     font-weight: 600;
-    margin: 5px 0px;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 1.2em;
     color: whitesmoke;
     text-align: left;
 }
 
 .artist, .album {
+    margin: 10px;
     text-align: left;
     color: whitesmoke;
 }
+
+
