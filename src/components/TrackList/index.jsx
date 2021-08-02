@@ -30,7 +30,28 @@ const TrackList = ({ track }) =>{
 
     return (
       <div className={style.wrapper}>
-        <table className={style.trackList} >
+        <div className={style.container}>
+              <div className={style.cover}>
+                  <Cover imageUrl={track.album.images[1].url} alt={track.album.name} />
+              </div>
+              <div className={style.trackTitle}>
+                  <p className={style.title}>{track.name}</p>
+                  <p className={style.artist}> {artistName} </p>
+              </div>
+              <div className={style.trackAlbum}>
+                  <p className={style.album}>{track.album.name}</p>
+              </div>
+              <div className={style.container__feature}>
+                    <Button 
+                      type="button"
+                      buttonStyle={isSelected ? "btn--primary--outline" : "btn--primary--solid"}
+                      buttonSize="btn--small" 
+                      onClick={handleClick}>
+                        {isSelected ? "Selected" : "Select"}
+                    </Button>
+              </div>
+        </div>
+        {/* <table className={style.trackList} >
           <tbody>
               <tr>
                 <td ><Cover imageUrl={track.album.images[0].url} alt={track.album} /></td>
@@ -42,7 +63,7 @@ const TrackList = ({ track }) =>{
                   <p className={style.album}>{track.album.name}</p>
                 </td>
                 <td className={style.btnSelect}>
-                  <Button 
+                    <Button 
                       type="button"
                       buttonStyle={isSelected ? "btn--primary--outline" : "btn--primary--solid"}
                       buttonSize="btn--small" 
@@ -52,7 +73,7 @@ const TrackList = ({ track }) =>{
                 </td>  
             </tr>
           </tbody>
-      </table>
+        </table> */}
       </div>
     );
 };

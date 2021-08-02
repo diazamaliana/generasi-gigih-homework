@@ -5,7 +5,6 @@ import { HiHome, HiPlus } from "react-icons/hi"
 
 const Sidebar = () => {
   return (
-    <div className={style.sidebar}>
       <ul >
         <Link to="/home" className={style.menu}>
           <li><HiHome fontSize="1.3em"/><span> Home </span></li>
@@ -14,7 +13,6 @@ const Sidebar = () => {
           <li><HiPlus fontSize="1.3em"/><span> Create Playlist </span></li>        
         </Link>
       </ul>        
-    </div>
   )
 }
 

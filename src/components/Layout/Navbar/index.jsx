@@ -15,7 +15,9 @@ const Navbar = () => {
           <h3><FaSpotify />  Spotigi</h3>
         </div>
         {isAuthenticated ? (
-          <Profile userData={user} />
+          <div className={style.user}>
+            <Profile userData={user} />
+          </div>
         ) : (
            <>
             <Button 
