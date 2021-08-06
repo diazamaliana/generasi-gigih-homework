@@ -6,7 +6,9 @@ import Sidebar from './components/Layout/Sidebar';
 import WelcomePage from './pages/Welcome';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import { ChakraProvider } from "@chakra-ui/react"
+
 
 
 
@@ -16,8 +18,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-          { isAuthenticated ?      
+          { isAuthenticated ?
+          <>
+            <Navbar />      
             <div className="wrapper">
               <aside className="sidebar">
                 <Sidebar />
@@ -28,15 +31,18 @@ function App() {
                     <PrivateRoute component={Home} path="/home" exact />
                   </Switch>
               </main>
-            </div>         
+            </div>   
+          </>      
             :
-            <div className="welcome">
+            <ChakraProvider>
+              <div className="welcome">
                 <Switch>
                     <Route path="/">
                         <WelcomePage />
                     </Route>
                 </Switch>
-            </div>
+              </div>
+            </ChakraProvider> 
             }              
       </BrowserRouter>
   </div>

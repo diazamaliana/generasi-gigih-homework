@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom'
 import style from './style.module.css'
-import { HiHome, HiPlus } from "react-icons/hi"
+import { IoHomeOutline, IoAddCircleOutline } from "react-icons/io5"
 
 
 const Sidebar = () => {
   return (
       <ul >
         <Link to="/home" className={style.menu}>
-          <li><HiHome fontSize="1.3em"/><span> Home </span></li>
+          <li><IoHomeOutline fontSize="1.3em"/><span> Home </span></li>
         </Link>
         <Link to="/create-playlist" className={style.menu}>
-          <li><HiPlus fontSize="1.3em"/><span> Create Playlist </span></li>        
+          <li><IoAddCircleOutline fontSize="1.3em"/><span>Create Playlist </span></li>        
         </Link>
       </ul>        
   )

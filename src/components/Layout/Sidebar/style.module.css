@@ -4,13 +4,19 @@
   
   .menu li {
     padding: 1em;
-    text-decoration: none;
+    display: flex;
+    place-items: center;
     color: whitesmoke;
     font-weight: 400;
     cursor: pointer;
     min-width: 100%;
     min-height: 50px;
   }
+
+  .menu li span{
+    margin: 0 5px;
+  }
+  
   .menu li:hover {
     background-color: var(--primary-grey);
   }
