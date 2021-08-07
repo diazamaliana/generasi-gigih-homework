@@ -17,7 +17,7 @@ const CreatePlaylist= () => {
       const options = {
         q: query,
         type: 'track',
-        limit: 12,
+        limit: 15,
       };
       setIsloading(true);
       getSearchTrack(accessToken, options).then((res) => {
@@ -27,7 +27,7 @@ const CreatePlaylist= () => {
   };
     
     return (
-    <div>
+    <div >
         <><PlaylistForm /></>
         <SearchBar handleSearch = {handleSearch} />
         {isLoading ? (

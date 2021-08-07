@@ -1,3 +1,15 @@
+  .sidebar {
+    background-color:  var(--primary-dark);
+    height: 100vh;
+
+  }
+
+  /* .mobile {
+    display: none;
+    padding: 15px 20px 10px 15px;
+    background-color: var(--primary-dark);
+  } */
+
   .menu {
     text-decoration: none;
   }
@@ -19,4 +31,13 @@
   
   .menu li:hover {
     background-color: var(--primary-grey);
+  }
+
+  @media (max-width: 578px) {
+    .sidebar {
+      display: none;
+    }
+    /* .mobile {
+      display: block;
+    } */
   }

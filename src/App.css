@@ -1,43 +1,37 @@
+.App{
+  height: 100vh;
+}
 .wrapper {
   display: grid;
-  grid-gap: 10px;
-  min-height: 100vh;
   padding-top: 4em;
-  grid-template-columns: 100%;
-  grid-template-areas: "main" "sidebar";
-}
+  grid-template-columns:  200px 1fr;
 
-@media (min-width: 800px) {
-  .wrapper {
-    grid-template-columns: 200px auto;
-    grid-template-areas: "sidebar main";
-  }
 }
-@media (min-width: 1200px) {
-  .wrapper {
-    grid-template-columns: 200px auto ;
-    grid-template-areas: "sidebar main";
-  }
-}
-
-.sidebar {
-  background-color:  var(--primary-dark);
-  grid-area: sidebar;
-}
-
 
 main {
-  grid-area: main;
   padding: 10px 20px;
   background-color: var(--secondary-dark);
-
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
-@media (min-width: 800px) {
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 578px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+
+  } 
   main {
-    padding: 10px 20px;
-    margin-bottom: 20px;
+    padding: 40px 20px;
+    height: fit-content;
   }
 }
+
 
 .welcome{
   overflow: hidden;

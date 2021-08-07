@@ -9,9 +9,6 @@ import PrivateRoute from './components/PrivateRoute';
 import { useSelector } from 'react-redux';
 import { ChakraProvider } from "@chakra-ui/react"
 
-
-
-
 function App() {
   const { isAuthenticated } = useSelector(state => state.userAuth)
 
@@ -22,9 +19,7 @@ function App() {
           <>
             <Navbar />      
             <div className="wrapper">
-              <aside className="sidebar">
-                <Sidebar />
-              </aside>
+              <Sidebar />
               <main>
                   <Switch>
                     <PrivateRoute component={CreatePlaylist} path="/create-playlist" exact />

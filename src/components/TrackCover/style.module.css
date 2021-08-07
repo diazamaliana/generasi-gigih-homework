@@ -1,6 +1,5 @@
 .Cover img{
-    width: 125px;
-    height: 125px;
+    width: 100px;
     object-fit: cover;
     border-radius:4px;
 }
