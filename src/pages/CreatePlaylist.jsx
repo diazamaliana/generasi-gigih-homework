@@ -34,7 +34,7 @@ const CreatePlaylist= () => {
             <p>Loading...</p>
         ) : (
             tracks.map(track => (
-            <TrackList track={track} key={track.id} />
+            <TrackList  track={track} key={track.id} />
             ))
         )}  
     </div>

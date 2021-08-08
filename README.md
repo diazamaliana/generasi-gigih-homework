@@ -84,9 +84,14 @@ When the button is clicked, create a new playlist with those title and descripti
 ### `Section 1`
 - [x] At minimum there should be one components that use Flexbox, and a different component that use Grid.
 - [x] You can freely choose which components that will be changed.
+
 ### `Section 2`
 - [x] Start using UI component library/just using CSS. You’re free to choose any library/just using CSS
 - [x] You can freely choose which components that will be changed.
+
+### `Section 3`
+- [x] Add typescript to your app
+- [x] Convert the Tracks component and Search API calls to Typescript. 
 
 
 
