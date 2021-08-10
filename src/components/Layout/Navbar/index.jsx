@@ -1,11 +1,8 @@
-import style from "./style.module.css";
-import Button from "../../Button";
 import {  IconButton,  Flex,  HStack,  Icon, Text } from '@chakra-ui/react';
 import {  FiMenu,  FiPower } from 'react-icons/fi';
 import Profile from "../../Profile";
 import { Link }from 'react-router-dom';
 import { useSpotifyAuth } from '../../../libraries/useSpotifyAuth';
-//import { authorize } from '../../../libraries/apiSpotify';
 import { FaSpotify } from "react-icons/fa";
 
 export  const NavItem  = ({icon, to = "/", children, ...rest }) => {
@@ -78,25 +75,6 @@ export const Navbar = ({ onOpen, ...rest }) => {
           />
         </HStack>
       </Flex>
-      // <div className={style.Navbar}>
-      //   <div className={style.logo}>
-      //     <h3><FaSpotify />  Spotigi</h3>
-      //   </div>
-      //   {isAuthenticated ? (
-      //     <div className={style.user}>
-      //       <Profile userData={user} />
-      //     </div>
-      //   ) : (
-      //      <>
-      //       <Button 
-      //         type="button"
-      //         buttonStyle="btn--primary--solid"
-      //         buttonSize="btn--medium" 
-      //         onClick={authorize}
-      //         >Login</Button> 
-      //     </>)
-      //   }       
-      // </div>
     );
   };
   

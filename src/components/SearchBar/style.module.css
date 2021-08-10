@@ -13,6 +13,7 @@
 .SearchBar input {
     color: white;
     padding: 1em;
+    border-radius: .5rem;
     margin-right: 0.5em;
     min-width: 300px;
     border: none;

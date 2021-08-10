@@ -1,10 +1,12 @@
 import './styles.css'
 import Card from 'components/Card'
+import { Heading } from '@chakra-ui/react'
+
 
 const Home = () => {
   return (
       <div className="home">
-        <h1 className="subtitle"> Playlists </h1>
+        <Heading className="subtitle"> Playlists </Heading>
         <div className="content">
           <Card
             title="hello"
