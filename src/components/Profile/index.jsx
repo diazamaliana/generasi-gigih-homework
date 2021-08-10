@@ -1,16 +1,40 @@
-import Style from "./style.module.css";
-import Link from "../Link";
+//import Style from "./style.module.css";
+import { Avatar,  Box,  HStack,  VStack,  Link, Button }from '@chakra-ui/react';
+//import Link from "../Link";
 
 const Profile = ({ userData }) => {
     const isLoading = userData.display_name === undefined;
     const { external_urls, display_name, images } = userData;
     return isLoading ? (
-      <div className={Style.container}>Loading...</div>
+      <Button
+        isLoading
+        loadingText="Loading"
+        colorScheme="teal"
+        variant="outline"
+        spinnerPlacement="start"
+      > Loading
+      </Button>
     ) : (
-      <div className={Style.container}>
-        <img className={Style.image} src={images[0]?.url} alt={display_name} />
-        <Link href={external_urls.spotify} className={Style.name}>{display_name}</Link>
-      </div>
+      <HStack>
+        <Avatar
+            size={'sm'}
+            src={images[0]?.url}
+            alt={display_name}
+        />
+        <VStack
+            display={{ base: 'none', md: 'flex' }}
+            alignItems="flex-start"
+            spacing="1px"
+            ml="2">
+            <Link href={external_urls.spotify} fontSize="md">{display_name}</Link>
+        </VStack>
+        <Box display={{ base: 'none', md: 'flex' }}>
+        </Box>
+    </HStack>
+      // <div className={Style.container}>
+      //   <img className={Style.image} src={images[0]?.url} alt={display_name} />
+      //   <Link href={external_urls.spotify} className={Style.name}>{display_name}</Link>
+      // </div>
     );
   };
   

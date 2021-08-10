@@ -12,7 +12,7 @@
 main {
   padding: 10px 20px;
   background-color: var(--secondary-dark);
-  height: calc(100vh - 65px);
+  height: 88vh;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

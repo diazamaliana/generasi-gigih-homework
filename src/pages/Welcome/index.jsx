@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { authorize } from '../../libraries/apiSpotify';
 import { useSpotifyAuth } from '../../libraries/useSpotifyAuth';
 import { Stack, Flex, Button, Text, VStack, useBreakpointValue,  Heading } from '@chakra-ui/react';
@@ -30,9 +31,9 @@ const Welcome = () => {
           Millions of songs and podcasts. No credit card needed.
         </Text>
         <Stack direction={'row'}>
-          { isAuthenticated ? (
-            <Text>You are authorize</Text>
-          ):
+          {/* { isAuthenticated ? (
+            <Redirect to="/home" />
+          ): */}
           <Button
             onClick={authorize}
             bg={'#1db954'}
@@ -40,7 +41,7 @@ const Welcome = () => {
             _hover={{ bg: 'whiteAlpha.500' }}>
             Log In
           </Button>
-          }         
+                   
         </Stack>
       </Stack>
     </VStack>

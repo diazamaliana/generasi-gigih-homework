@@ -4,23 +4,7 @@ import Link from "../Link";
 import Cover from "../TrackCover";
 import style from './style.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-//import { store } from "../../redux";
 import { addSelectedTracks, removeSelectedTracks } from "../../redux/store/playlist";
-
-// interface ITrackList {
-//   track: {
-//     album: {
-//       images: {
-//         [index: number]: {
-//           url: string;
-//         };
-//       };
-//     };
-//     name: string;
-//     uri: string;
-//   };
-// }
-
 
 const TrackList = ({ track }) =>{
     const dispatch = useDispatch();
