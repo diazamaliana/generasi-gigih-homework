@@ -26,4 +26,3 @@ const initialState = {
   export const { login, logout, storeUser } = userAuthSlice.actions
   
   export default userAuthSlice.reducer
-

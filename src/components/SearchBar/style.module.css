@@ -1,6 +1,7 @@
 .SearchBar {
   text-align: left;
   padding: 0.75rem;
+  width: 100%;
 }
 
 .SearchBar p{
@@ -12,10 +13,18 @@
 .SearchBar input {
     color: white;
     padding: 1em;
+    border-radius: .5rem;
     margin-right: 0.5em;
     min-width: 300px;
     border: none;
     background-color:#4d4d4d;
     outline: none;
+}
+
+@media (max-width: 578px) {
+  .SearchBar {
+    width: auto;
+  } 
+  
 }
   

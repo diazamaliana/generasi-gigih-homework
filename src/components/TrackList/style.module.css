@@ -1,28 +1,29 @@
-.wrapper {
-    padding: .1rem .75rem;
-}
-
 .container {
     align-items: flex-start;
-    display: flex;
     border-bottom: 1px solid var(--primary-grey);
-    /* Spacing */
-    margin: 0px;
-    padding: 8px ;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: pointer;
 }
 
 .container:hover{
     background-color: var(--primary-grey);
 }
 
-.cover {
-    width: 128px;
-    height: 128px;
+
+.trackTitle{
+    display: column;
+    text-overflow: ellipsis;
+    flex: 1;
+    align-items: center;
 }
 
-.trackTitle, .trackAlbum{
-  flex: 1;
-  padding-left: 0.8em;
+.trackAlbum{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 

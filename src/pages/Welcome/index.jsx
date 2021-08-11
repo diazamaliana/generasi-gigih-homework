@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+//import { Redirect } from 'react-router-dom';
 import { authorize } from '../../libraries/apiSpotify';
 import { useSpotifyAuth } from '../../libraries/useSpotifyAuth';
 import { Stack, Flex, Button, Text, VStack, useBreakpointValue,  Heading } from '@chakra-ui/react';
@@ -31,7 +32,7 @@ const Welcome = () => {
         </Text>
         <Stack direction={'row'}>
           { isAuthenticated ? (
-            <Text>You are authorize</Text>
+            <p>Yoa are authorize</p>
           ):
           <Button
             onClick={authorize}
@@ -40,7 +41,7 @@ const Welcome = () => {
             _hover={{ bg: 'whiteAlpha.500' }}>
             Log In
           </Button>
-          }         
+          }    
         </Stack>
       </Stack>
     </VStack>

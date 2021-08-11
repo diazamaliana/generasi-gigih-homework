@@ -31,28 +31,40 @@ const getSearchTrack = (accessToken, options) => {
   }).then(res => res.json())
 };
 
+const getUserPlaylist = (accessToken, userId, options) => {
+  const params = new URLSearchParams(options).toString()
+  return fetch(`${API_ENDPOINT}/users/${userId}/playlists?${params}`, {
+    headers: { 
+      'Authorization': 'Bearer ' + accessToken, 
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+};
+
 const createPlaylist = (accessToken, userId, payload) =>{
-  return fetch(`${API_ENDPOINT}/users/${userId}/playlists`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + accessToken
-    },
-    body: JSON.stringify(payload)
-}).then(res => res.json())
+    return fetch(`${API_ENDPOINT}/users/${userId}/playlists`, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + accessToken
+      },
+      body: JSON.stringify(payload)
+  }).then(res => res.json())
 }
 
 const addTrackToPlaylist = (accessToken, playlistId, payload) => {
-  return fetch(`${API_ENDPOINT}/playlists/${playlistId}/tracks`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + accessToken
-    },
-    body: JSON.stringify(payload)
-}).then(res => res.json())
+    return fetch(`${API_ENDPOINT}/playlists/${playlistId}/tracks`, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + accessToken
+      },
+      body: JSON.stringify(payload)
+  }).then(res => res.json())
 }
 
-export { getSpotifyAuth, getProfile, getSearchTrack, createPlaylist, addTrackToPlaylist };
+
+
+export { getSpotifyAuth, getProfile, getSearchTrack, createPlaylist, addTrackToPlaylist, getUserPlaylist };
 
  

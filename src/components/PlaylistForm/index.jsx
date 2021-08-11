@@ -3,6 +3,8 @@ import Button from "../Button";
 import { useDispatch, useSelector } from 'react-redux'
 import { setForm } from "../../redux/store/playlist";
 import { createPlaylist, addTrackToPlaylist } from "../../libraries/apiSpotify";
+import { Heading } from '@chakra-ui/react'
+
 
 const PlaylistForm = () => {
   const { accessToken, user } = useSelector(state => state.userAuth)
@@ -35,7 +37,7 @@ const PlaylistForm = () => {
 
   return (
     <div className={style.wrapper}>
-      <h1>Create Playlist</h1>
+      <Heading>Create Playlist</Heading>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title</label>
         <input

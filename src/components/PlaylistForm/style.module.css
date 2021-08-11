@@ -17,6 +17,7 @@
     padding: 1em;
     margin-right: 0.5em;
     min-width: 300px;
+    border-radius: .5rem;
     border: none;
     background-color:#4d4d4d;
     outline: none;
