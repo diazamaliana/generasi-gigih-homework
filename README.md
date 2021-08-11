@@ -91,7 +91,14 @@ When the button is clicked, create a new playlist with those title and descripti
 
 ### `Section 3`
 - [x] Add typescript to your app
-- [x] Convert the Tracks component and Search API calls to Typescript. 
+- [x] Convert some component to Typescript.
+
+## Module 6
+### `Section 1`
+- [x] Write a test for Tracks component
+- [x] (Optional) Write a test for Search API function. Use the mock server, and fire the request to the mock server instead
+
+
 
 
 

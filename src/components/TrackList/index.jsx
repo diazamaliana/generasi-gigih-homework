@@ -6,9 +6,9 @@ import style from './style.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addSelectedTracks, removeSelectedTracks } from "../../redux/store/playlist";
 
+
 const TrackList = ({ track }) =>{
     const dispatch = useDispatch();
-    //type RootState = ReturnType<typeof store.getState>;
 
     const selectedTracks = useSelector(state => state.playlist.selectedTracks)
     const isSelected = selectedTracks.includes(track.uri);
@@ -33,14 +33,14 @@ const TrackList = ({ track }) =>{
       <div className={style.wrapper}>
           <div className={style.container}>
               <div className={style.cover}>
-                  <Cover imageUrl={track.album.images[1].url} alt={track.album.name} />
+                  <Cover data-testid="album-cover" imageUrl={track.album.images[2].url} alt={track.album.name} />
               </div>
               <div className={style.trackTitle}>
-                  <p className={style.title}>{track.name}</p>
-                  <p className={style.artist}> {artistName} </p>
+                  <p data-testid="track-name" className={style.title}>{track.name}</p>
+                  <p data-testid="artist-name" className={style.artist}> {artistName} </p>
               </div>
               <div className={style.trackAlbum}>
-                  <p className={style.album}>{track.album.name}</p>
+                  <p data-testid="album-name" className={style.album}>{track.album.name}</p>
               <Button 
                 type="button"
                 buttonStyle={isSelected ? "btn--primary--outline" : "btn--primary--solid"}

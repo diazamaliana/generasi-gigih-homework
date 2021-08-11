@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import TrackList from "./index";
-import userEvent from "@testing-library/user-event";
 import { Provider } from 'react-redux';
 import { store } from "../../redux";
 import data from '../../data/SingleTrack'
@@ -15,7 +14,7 @@ global.matchMedia =
     };
 }
 
-test("tracks component are rendered correctly", () => {
+test("tracks component are rendered correctly", async ()  => {
     render(
     <Provider store={store}>
         <TrackList  track={data} />

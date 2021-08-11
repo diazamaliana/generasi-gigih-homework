@@ -2508,7 +2508,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-redux@^7.1.16":
+"@types/react-redux@^7.1.16", "@types/react-redux@^7.1.18":
   version "7.1.18"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.18.tgz#2bf8fd56ebaae679a90ebffe48ff73717c438e04"
   integrity sha512-9iwAsPyJ9DLTRH+OFeIrm9cAbIj1i2ANL3sKQFATqnPWRbg+jEFXyZOKHiQK/N86pNRXbb4HRxAxo0SIX1XwzQ==
@@ -2552,6 +2552,11 @@
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
   integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
+
+"@types/spotify-api@0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@types/spotify-api/-/spotify-api-0.0.11.tgz#5cc45ad6341b5233f4617601dc4826b9e6370473"
+  integrity sha512-ZSEpG22JPMcN+tR0+U3wvmGHF4L+jyh1N+8aFbT6WzdXwPuTgH2iL+wKASkMN79CEntHQTPgBwpywZVDhll0Eg==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.0"
