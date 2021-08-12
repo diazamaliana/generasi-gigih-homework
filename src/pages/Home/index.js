@@ -1,31 +1,38 @@
 import './styles.css'
 import Card from 'components/Card'
 import { Heading } from '@chakra-ui/react'
+import { getUserPlaylist } from '../../libraries/apiSpotify'
+import { useEffect, useState } from "react";
+import { useSelector } from 'react-redux';
+
+ 
 
 
 const Home = () => {
+  const { isAuthenticated, accessToken } = useSelector(state => state.userAuth)
+  const [playlists, setPlaylists] = useState([]);
+
+  useEffect(() => {
+   if(isAuthenticated)
+    getUserPlaylist(accessToken)
+      .then(user => setPlaylists(user.items))
+  }, [isAuthenticated, accessToken]);
+
   return (
       <div className="home">
-        <Heading className="subtitle"> Playlists </Heading>
+        <Heading className="subtitle"> Public Playlists </Heading>
         <div className="content">
-          <Card
-            imageUrl="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gold-music-mixtape-album-cover-a-design-template-a84a8218d568ac563d9e99f4356b90e5_screen.jpg?ts=1589012098"
-            title="Lorem Ipsum "
-            artist="John Doe"
+          {playlists.map( playlist => 
+            <Card
+            key={playlist.id}
+            alt={playlist.name}
+            imageUrl={playlist.images[0]?.url}
+            title={playlist.name}
+            owner={'By '+ playlist.owner.display_name}
             thumbnail="123"
           />
-           <Card
-            imageUrl="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gold-music-mixtape-album-cover-a-design-template-a84a8218d568ac563d9e99f4356b90e5_screen.jpg?ts=1589012098"
-            title="Dolor  Sit Amet"
-            artist="Jane Doe"
-            thumbnail="123"
-          />
-           <Card
-            imageUrl="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gold-music-mixtape-album-cover-a-design-template-a84a8218d568ac563d9e99f4356b90e5_screen.jpg?ts=1589012098"
-            title="Maecenas fermentum"
-            artist="Bruno Santarino"
-            thumbnail="123"
-          />
+          )}
+          
         </div>
       </div>
   )

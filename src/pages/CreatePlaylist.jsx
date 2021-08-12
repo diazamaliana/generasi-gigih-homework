@@ -2,7 +2,7 @@ import { useState } from "react";
 import PlaylistForm from "../components/PlaylistForm";
 import TrackList from "../components/TrackList";
 import SearchBar from "../components/SearchBar";
-import { getSearchTrack,  } from "../libraries/apiSpotify";
+import { getSearchTrack  } from "../libraries/apiSpotify";
 import { setTracks } from "../redux/store/playlist";
 import { useSelector, useDispatch } from 'react-redux';
 

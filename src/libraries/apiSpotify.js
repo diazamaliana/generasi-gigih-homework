@@ -31,13 +31,9 @@ const getSearchTrack = (accessToken, options) => {
   }).then(res => res.json())
 };
 
-const getUserPlaylist = (accessToken, userId, options) => {
-  const params = new URLSearchParams(options).toString()
-  return fetch(`${API_ENDPOINT}/users/${userId}/playlists?${params}`, {
-    headers: { 
-      'Authorization': 'Bearer ' + accessToken, 
-      'Content-Type': 'application/json'
-    }
+const getUserPlaylist = (accessToken) => {
+  return fetch(`${API_ENDPOINT}/me/playlists`, {
+    headers: { 'Authorization': 'Bearer ' + accessToken }
   }).then(res => res.json())
 };
 

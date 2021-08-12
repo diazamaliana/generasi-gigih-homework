@@ -6,12 +6,12 @@ export interface ICard {
   id: number,
   alt : string,
   title: string,
-  artist: string,
+  owner: string,
   imageUrl: string,
   onClick?: () => void
 }
 
-const Card = ({title, artist, alt, imageUrl, onClick} : ICard) => {
+const Card = ({title, owner, alt, imageUrl, onClick} : ICard) => {
   return (
     <div className="card" onClick={onClick}>
       <div className="card__thumbnail"  data-testid="card-thumbnail">
@@ -20,7 +20,7 @@ const Card = ({title, artist, alt, imageUrl, onClick} : ICard) => {
       <div className="card__content">
         <div className="card__wrapper">
           <h3 className="card__title">{title}</h3>
-          <span className="card__artist">{artist}</span>
+          <span className="card__owner">{owner}</span>
         </div>
       </div>
     </div>
