@@ -29,7 +29,6 @@ const Home = () => {
             imageUrl={playlist.images[0]?.url}
             title={playlist.name}
             owner={'By '+ playlist.owner.display_name}
-            thumbnail="123"
           />
           )}
           
