@@ -97,7 +97,7 @@ When the button is clicked, create a new playlist with those title and descripti
 ### `Section 1`
 - [x] Write a test for Tracks component
 - [x] (Optional) Write a test for Search API function. Use the mock server, and fire the request to the mock server instead
-### 'Section 3'
+### `Section 3`
 - [x] Build your app
 - [x] Fix any warnings
 - [x] Deploy to vercel. Make sure that your app is accessible
